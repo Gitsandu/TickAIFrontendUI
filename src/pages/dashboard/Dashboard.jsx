@@ -1,7 +1,11 @@
 import { Box, Grid, Paper, Typography } from '@mui/material';
 import { ConfirmationNumber, People, Timeline, TrendingUp } from '@mui/icons-material';
-import { LineChart, BarChart } from "@mui/x-charts"; // ✅ correct
-import { PieChart, pieArcLabelClasses } from '@mui/x-charts/PieChart';
+import {
+    LineChart,
+    BarChart,
+    PieChart,
+    pieArcLabelClasses
+  } from '@mui/x-charts';  
 
 const mockLineData = [
     { name: 'Mon', tickets: 12, resolved: 10 },
