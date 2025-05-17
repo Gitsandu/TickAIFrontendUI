@@ -58,18 +58,33 @@ const DashboardCard = ({ title, value, icon }) => (
 const Dashboard = () => {
     return (
         <Box sx={{ height: '100%' }}>
-            <Typography variant="h4" sx={{ mb: 4 }}>
-                Dashboard
-            </Typography>
+            <Grid container spacing={2} sx={{ mb: 2 }}>
+                <Grid size={{ xs: 12 }}>
+                    <Paper
+                        elevation={3}
+                        sx={{
+                            p: 3,
+                            borderRadius: 2,
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'space-between',
+                            boxShadow: 3,
+                        }}
+                    >
+                        <Typography variant="h4">Dashboard</Typography>
+                    </Paper>
+                </Grid>
+            </Grid>
+
             <Grid container spacing={2}>
-                <Grid item xs={12} md={3}>
+                <Grid size={{ xs: 12, md: 3 }}>
                     <DashboardCard
                         title="Total Tickets"
                         value="125"
                         icon={<ConfirmationNumber sx={{ fontSize: 56 }} />}
                     />
                 </Grid>
-                <Grid item xs={12} md={3}>
+                <Grid size={{ xs: 12, md: 3 }}>
                     <DashboardCard
                         title="Active Agents"
                         value="8"

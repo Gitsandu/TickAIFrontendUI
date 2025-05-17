@@ -1,7 +1,8 @@
 import { Box, Container } from '@mui/material';
+import { Outlet } from 'react-router-dom';
 import Sidebar from './Sidebar';
 
-const Layout = ({ children }) => {
+const Layout = () => {
   return (
     <Box sx={{ display: 'flex' }}>
       <Sidebar />
@@ -16,7 +17,7 @@ const Layout = ({ children }) => {
         }}
       >
         <Container maxWidth="xl" sx={{ height: '100%' }}>
-          {children}
+          <Outlet />
         </Container>
       </Box>
     </Box>

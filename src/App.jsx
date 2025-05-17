@@ -8,6 +8,7 @@ import Dashboard from './pages/dashboard/Dashboard';
 import Tickets from './pages/tickets/Tickets';
 import Agents from './pages/agents/Agents';
 import Contactus from './pages/contactus/Contactus';
+import Settings from './pages/settings/Settings';
 
 const theme = createTheme({
   palette: {
@@ -37,7 +38,7 @@ function App() {
             <Route path="/org/tickets" element={<Tickets />} />
             <Route path="/org/agents" element={<Agents />} />
             <Route path="/org/support" element={<Dashboard />} />
-            <Route path="/org/settings" element={<Dashboard />} />
+            <Route path="/org/settings" element={<Settings />} />
           </Route>
         </Routes>
       </Router>

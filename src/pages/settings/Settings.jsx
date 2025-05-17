@@ -1,11 +1,27 @@
-import { Box, Card, CardContent, Grid, TextField, Button, Typography, Switch, FormControlLabel } from '@mui/material';
+import { Box, Card, CardContent, Grid, TextField, Button, Typography, Switch, FormControlLabel, Paper } from '@mui/material';
 
 const Settings = () => {
   return (
     <Box sx={{ p: 3 }}>
-      <Typography variant="h4" sx={{ mb: 4 }}>
-        Settings
-      </Typography>
+
+      <Grid container spacing={2} sx={{ mb: 2 }}>
+                <Grid size={{ xs: 12 }}>
+                    <Paper
+                        elevation={3}
+                        sx={{
+                            p: 3,
+                            borderRadius: 2,
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'space-between',
+                            boxShadow: 3,
+                        }}
+                    >
+                        <Typography variant="h4">Settings</Typography>
+                    </Paper>
+                </Grid>
+            </Grid>
+
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
           <Card>
