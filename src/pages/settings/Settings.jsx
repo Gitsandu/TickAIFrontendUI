@@ -1,0 +1,82 @@
+import { Box, Card, CardContent, Grid, TextField, Button, Typography, Switch, FormControlLabel } from '@mui/material';
+
+const Settings = () => {
+  return (
+    <Box sx={{ p: 3 }}>
+      <Typography variant="h4" sx={{ mb: 4 }}>
+        Settings
+      </Typography>
+      <Grid container spacing={3}>
+        <Grid item xs={12} md={6}>
+          <Card>
+            <CardContent>
+              <Typography variant="h6" gutterBottom>
+                Profile Settings
+              </Typography>
+              <Box component="form" sx={{ mt: 2 }}>
+                <TextField
+                  required
+                  fullWidth
+                  label="Display Name"
+                  margin="normal"
+                />
+                <TextField
+                  required
+                  fullWidth
+                  label="Email"
+                  type="email"
+                  margin="normal"
+                />
+                <TextField
+                  required
+                  fullWidth
+                  label="Current Password"
+                  type="password"
+                  margin="normal"
+                />
+                <TextField
+                  fullWidth
+                  label="New Password"
+                  type="password"
+                  margin="normal"
+                />
+                <Button
+                  variant="contained"
+                  color="primary"
+                  sx={{ mt: 2 }}
+                >
+                  Save Changes
+                </Button>
+              </Box>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Card>
+            <CardContent>
+              <Typography variant="h6" gutterBottom>
+                Preferences
+              </Typography>
+              <Box sx={{ mt: 2 }}>
+                <FormControlLabel
+                  control={<Switch defaultChecked />}
+                  label="Email Notifications"
+                />
+                <FormControlLabel
+                  control={<Switch defaultChecked />}
+                  label="Desktop Notifications"
+                />
+                <FormControlLabel
+                  control={<Switch />}
+                  label="Sound Notifications"
+                />
+              </Box>
+            </CardContent>
+          </Card>
+        </Grid>
+      </Grid>
+    </Box>
+  );
+};
+
+export default Settings;
